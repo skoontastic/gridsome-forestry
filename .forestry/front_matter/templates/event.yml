@@ -39,3 +39,6 @@ fields:
   config:
     maxSize: 250
   label: Event Image
+- name: all_day
+  type: boolean
+  label: All Day
