@@ -2,39 +2,51 @@
 // Learn more: https://gridsome.org/docs/config
 
 module.exports = {
-  siteName: "Nichlas W. Andersen",
-  siteUrl: `https://www.itsnwa.com`,
-  titleTemplate: "%s - NWA",
-  siteDescription: "Creative technologist",
-  plugins: [
-    {
-      use: "@gridsome/source-filesystem",
-      options: {
-        path: "projects/**/*.md",
-        typeName: "ProjectPost",
-        resolveAbsolutePaths: true,
-        remark: {
-          externalLinksTarget: "_blank",
-          externalLinksRel: ["nofollow", "noopener", "noreferrer"]
-        }
-      }
-    },
-    {
-      use: "@gridsome/source-filesystem",
-      options: {
-        path: "journal/**/*.md",
-        typeName: "JournalPost",
-        resolveAbsolutePaths: true,
-        remark: {
-          externalLinksTarget: "_blank",
-          externalLinksRel: ["nofollow", "noopener", "noreferrer"]
-        }
-      }
-    }
-  ],
-  transformers: {
-    remark: {
-      plugins: ["@gridsome/remark-prismjs"]
-    }
-  }
+	siteName: "Nichlas W. Andersen",
+	siteUrl: `https://www.itsnwa.com`,
+	titleTemplate: "%s - NWA",
+	siteDescription: "Creative technologist",
+	plugins: [
+		{
+			use: "@gridsome/source-filesystem",
+			options: {
+				path: "projects/**/*.md",
+				typeName: "ProjectPost",
+				resolveAbsolutePaths: true,
+				remark: {
+					externalLinksTarget: "_blank",
+					externalLinksRel: ["nofollow", "noopener", "noreferrer"]
+				}
+			}
+		},
+		{
+			use: "@gridsome/source-filesystem",
+			options: {
+				path: "journal/**/*.md",
+				typeName: "JournalPost",
+				resolveAbsolutePaths: true,
+				remark: {
+					externalLinksTarget: "_blank",
+					externalLinksRel: ["nofollow", "noopener", "noreferrer"]
+				}
+			}
+		},
+		{
+			use: "@gridsome/source-filesystem",
+			options: {
+				path: "events/**/*.md",
+				typeName: "Event",
+				resolveAbsolutePaths: true,
+				remark: {
+					externalLinksTarget: "_blank",
+					externalLinksRel: ["nofollow", "noopener", "noreferrer"]
+				}
+			}
+		}
+	],
+	transformers: {
+		remark: {
+			plugins: ["@gridsome/remark-prismjs"]
+		}
+	}
 };

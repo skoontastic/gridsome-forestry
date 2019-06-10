@@ -1,10 +1,11 @@
 <template>
   <Layout>
     <div class="container">
-      <Hero />
-      <ProjectsGrid :projects="$page.projects.edges" />
+      <Hero/>
+      <ProjectsGrid :projects="$page.projects.edges"/>
     </div>
-    <LatestJournals :journals="$page.journals.edges" />
+    <LatestJournals :journals="$page.journals.edges"/>
+    <Events :events="$page.events.edges"/>
   </Layout>
 </template>
 
@@ -30,20 +31,35 @@ query Posts {
         title
       }
     }
+  },
+  events: allEvent {
+    edges {
+      node {
+        eventName,
+        startTime,
+        endTime,
+        description,
+        allDay,
+        path
+      }
+    }
   }
 }
+
 </page-query>
 
 <script>
-import Hero from "@/components/Hero"
-import ProjectsGrid from "@/components/ProjectsGrid"
-import LatestJournals from "@/components/LatestJournals"
+import Hero from "@/components/Hero";
+import ProjectsGrid from "@/components/ProjectsGrid";
+import LatestJournals from "@/components/LatestJournals";
+import Events from "@/components/Events";
 
 export default {
   components: {
     Hero,
     ProjectsGrid,
-    LatestJournals
+    LatestJournals,
+    Events
   }
-}
+};
 </script>
