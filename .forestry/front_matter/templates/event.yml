@@ -44,4 +44,5 @@ fields:
   type: boolean
   label: All Day
 pages:
+- events/another_event.md
 - events/test_event.md
