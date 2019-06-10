@@ -1,4 +1,41 @@
 ---
 label: Event
 hide_body: true
-fields: []
+fields:
+- name: event_name
+  type: text
+  config:
+    required: false
+  label: Event Name
+- name: start_time
+  type: datetime
+  label: Start Time
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+- name: end_time
+  type: datetime
+  label: End Time
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Description
+- name: event_image
+  type: file
+  config:
+    maxSize: 250
+  label: Event Image
