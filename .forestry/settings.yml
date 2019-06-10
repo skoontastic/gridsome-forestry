@@ -9,6 +9,8 @@ sections:
   label: Events
   create: documents
   match: "**/*"
+  templates:
+  - event
 - type: directory
   path: projects
   label: Projects
