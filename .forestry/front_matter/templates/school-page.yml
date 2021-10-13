@@ -21,3 +21,5 @@ fields:
   hidden: true
   label: Template
   default: school
+pages:
+- pages/high-school.md
