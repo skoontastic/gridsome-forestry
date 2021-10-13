@@ -14,3 +14,10 @@ fields:
   config:
     min: 
     max: 
+- name: template
+  type: text
+  config:
+    required: false
+  hidden: true
+  label: Template
+  default: school
